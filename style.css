@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:ital,wght@0,300;0,800;1,400&family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+body{
+    background-color: rgb(220, 219, 219);
+
+}
+
+.container {
+    margin: 50px auto;
+    /* background-color: rgb(220, 219, 219); */
+
+}
+
+.row content {
+    width: 75vw;
+}
+
+.sidenav {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 17px;
+    /* margin-left: 10px; */
+    text-align: left;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+.nav{
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+
+.sidenav img {
+    width: 120px;
+}
+
+.row.content {
+    height: 100%
+}
+
+.sidenav {
+    background-color:white ;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .row.content {
+        height: auto;
+    }
+
+    .sidenav {
+        margin-bottom: 20px;
+    }
+    .container {
+        margin-top: 0px;
+    }
+
+}
+
+.sidenav h3 {
+    font-weight: 600;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:active {
+    color: rgb(0, 0, 12);
+    background: rgb(185, 185, 4);
+}
+
+.companyDiv {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 10px;
+}
+.jobDiv{
+    display: flex;
+    align-items: center;
+}
+.jobDiv div{
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+}
+label{
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.form-control{
+    border-radius: 10px;
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+}
+.badge {
+font-size: 1em;
+padding: 10px;
+width: 80px;
+
+}
+.form-group{
+    align-items: center;
+}
+
+.textWithbox{
+    align-items: center;
+    margin-top: 30px;
+}
+
+input[type=checkbox] {
+    border: 2px solid yellow;
+    cursor: pointer;
+    box-shadow: 1px;
+  }
+.btn{
+    margin: 10px 20px;
+    width: 100px;
+    
+    border-radius: 40%;
+}
+.btn-group{
+    margin-left: 6px;
+    /* margin-right: 200px; */
+    /* position: absolute; */
+}
+
+/* $badge-font-size:                   .75em;
+$badge-font-weight:                 $font-weight-bold;
+$badge-color:                       $white;
+$badge-padding-y:                   .35em;
+$badge-padding-x:                   .65em;
+$badge-border-radius:               $border-radius; */
