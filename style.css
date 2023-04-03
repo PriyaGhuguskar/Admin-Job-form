@@ -6,13 +6,14 @@
     box-sizing: border-box;
     font-family: Poppins;
 }
-body{
+
+body {
     background-color: rgb(220, 219, 219);
 
 }
 
 .container {
-    margin: 50px auto;
+    margin: 40px auto;
     /* background-color: rgb(220, 219, 219); */
 
 }
@@ -22,6 +23,7 @@ body{
 }
 
 .sidenav {
+    height: 100%;
     background-color: white;
     border: 1px solid gray;
     border-radius: 10px;
@@ -30,9 +32,16 @@ body{
     text-align: left;
     /* align-items: center; */
     justify-content: center;
+    /* height: fit-content; */
 
 }
-.nav{
+
+
+.bodyContent{
+    /* left: 600px; */
+}
+
+.nav {
     text-align: left;
     margin-left: 20px;
 
@@ -40,26 +49,27 @@ body{
 
 
 .sidenav img {
-    width: 120px;
+    width: 100px;
 }
 
+/* 
 .row.content {
     height: 100%
-}
+} */
 
-.sidenav {
-    background-color:white ;
-    height: 100%;
-}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width<=810px) {
     .row.content {
         height: auto;
+        
     }
 
     .sidenav {
+        margin: 0px auto;
+        padding: 20px;
         margin-bottom: 20px;
     }
+
     .container {
         margin-top: 0px;
     }
@@ -71,7 +81,7 @@ body{
     color: black;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -88,11 +98,13 @@ a:active {
     margin-bottom: 30px;
     box-shadow: 10px;
 }
-.jobDiv{
+
+.jobDiv {
     display: flex;
     align-items: center;
 }
-.jobDiv div{
+
+.jobDiv div {
     width: 100px;
     height: 80px;
     display: flex;
@@ -102,16 +114,17 @@ a:active {
     margin-bottom: 20px;
     margin-right: 20px;
     border: 1px solid rgba(0, 0, 0, 0.6);
-border-radius: 10px;
+    border-radius: 10px;
 }
-label{
+
+label {
     color: black;
     font-size: large;
     font-weight: 500;
     margin-bottom: 2px;
 }
 
-.form-control{
+.form-control {
     border-radius: 10px;
     border: 2px solid black;
     outline: none;
@@ -119,17 +132,19 @@ label{
     font-size: larger;
     font-weight: bolder;
 }
+
 .badge {
-font-size: 1em;
-padding: 10px;
-width: 80px;
+    font-size: 1em;
+    padding: 10px;
+    width: 80px;
 
 }
-.form-group{
+
+.form-group {
     align-items: center;
 }
 
-.textWithbox{
+.textWithbox {
     align-items: center;
     margin-top: 30px;
 }
@@ -138,18 +153,21 @@ input[type=checkbox] {
     border: 2px solid yellow;
     cursor: pointer;
     box-shadow: 1px;
-  }
-.btn{
+}
+
+.btn {
     margin: 10px 20px;
     width: 100px;
-    
+
     border-radius: 40%;
 }
-.btn-group{
+
+.btn-group {
     margin-left: 6px;
     /* margin-right: 200px; */
     /* position: absolute; */
 }
+
 
 /* $badge-font-size:                   .75em;
 $badge-font-weight:                 $font-weight-bold;

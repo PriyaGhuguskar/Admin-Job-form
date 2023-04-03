@@ -7,220 +7,324 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
 
 
 </head>
 
 <body>
 
+    <!-- Header -->
+<header>
+        <div class="container-fluid bg-dark" style="position: fixed; top: 0;">
+            <img style="margin-left: 70px;" src="https://daifhb63cb3v5.cloudfront.net/website/static/Olous_logo_with_text.svg" alt="" width="125" height="40" class="d-inline-block align-text-top">
+        </div>
+</header>
     <div class="container">
         <div class="row content">
-            <div class="col-md-2 sidenav">
+
+            <div class="col-md-2 sidenav" id="sidebar">
+
                 <center>
                     <img src="./510px-Evergreen_Roundel.svg.png" alt="Add" />
                     <h4>Evergreen Companies Pvt.Ltd</h4>
                     <ul class="nav flex-column">
-                        <li class="nav-item mt-4 mb-2">
+                        <li class="nav-item mt-2 mb-2">
                             Dashboard
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Analytics
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Company
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Job
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Lead
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Articles
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Headlines
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Enquiry
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Pricing
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Employee
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-2">
                             Report
                         </li>
-                        <li class="nav-item mt-2 mb-2">
+                        <li class="nav-item mb-1">
                             Logout
                         </li>
-                       
-                       
+
+
                     </ul>
                 </center>
             </div>
 
-            <div class="col-md-9 bodyContent">
+            <div class="col-md-10 bodyContent">
                 <!-- 1st  -->
-                <div class="companyDiv">
-                    <div class="jobDiv">
-                        <div>Company Logo</div>
-                        <h4 style="font-weight: 700;">Add Jobs</h4>
+                <form id="job-registration-form">
+                    <!-- 1st Div -->
+                    <div class="companyDiv">
+                        <div class="jobDiv">
+                            <div>Company Logo</div>
+                            <h4 style="font-weight: 700;">Add Jobs</h4>
+                        </div>
+
+                        <!-- Company Name -->
+                        <div class="mb-3 mt-2">
+                            <label for="CompanyName" class="form-label">Company name</label>
+                            <input type="text" class="form-control" id="CompanyName" placeholder="company Name" required
+                                autocomplete="off" onkeyup="validate()">
+                            <div class="valid-feedback" id="CompanyName-valid">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="CompanyName-invalid">
+                                Please enter a valid Company Name
+                            </div>
+                        </div>
+                        <!-- Job Title -->
+                        
+                        <div class="mb-2 mt-2">
+                            <div class="mb-2 mt-2">
+                                <label for="JobTitle" class="form-label">Job Title</label>
+                                <input type="text" class="form-control" id="JobTitle" placeholder="Enter Job Title"
+                                    required autocomplete="off" onkeyup="validate()">
+                                <div class="valid-feedback" id="JobTitle-valid">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="JobTitle-invalid">
+                                    Please enter a valid JobTitle
+                                </div>
+
+                            </div>
+                            <!-- Country and City-->
+                            <div class="mb-2 mt-2 row">
+                                <div class="col-md-6">
+                                    <label for="Country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="Country" placeholder="Enter Country"
+                                        required autocomplete="off" onkeyup="validate()">
+                                    <div class="valid-feedback" id="Country-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="Country-invalid">
+                                        Please enter a valid Country
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="City" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="City" placeholder="Enter City" required
+                                        autocomplete="off" onkeyup="validate()">
+                                    <div class="valid-feedback" id="City-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="City-invalid">
+                                        Please enter a valid City
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Level Choose option -->
+                            <div class="mb-2 mt-2 row">
+                                <div class="col-md-4">
+                                    <label for="Level" class="form-label">Level</label>
+                                    <select class="form-select mb-3" id="Level" required onchange="validate()">
+                                        <option value="None" selected>Choose...</option>
+                                        <option value="1">Entry Level</option>
+                                        <option value="2">Senior</option>
+                                        <option value="3">Associate</option>
+                                        <option value="3">Executive</option>
+                                    </select>
+                                    <div class="valid-feedback" id="Level-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="Level-invalid">
+                                        Please select a valid Level.
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="MinExp" class="form-label">Min Exp.(Years)</label>
+                                    <select class="form-select mb-3" id="MinExp" required onchange="validate()">
+                                        <option value="None" selected>Choose...</option>
+                                        <option value="1">Fresher</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="3">5</option>
+
+                                    </select>
+                                    <div class="valid-feedback" id="MinExp-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="MinExp-invalid">
+                                        Please select a valid Minimum Experience.
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="MaxExp" class="form-label">Max Exp.(Years)</label>
+                                    <select class="form-select mb-3" id="MaxExp" required onchange="validate()">
+                                        <option value="None" selected>Choose...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">3</option>
+                                        <option value="3">5</option>
+                                        <option value="3">7</option>
+                                    </select>
+                                    <div class="valid-feedback" id="MaxExp-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="MaxExp-invalid">
+                                        Please select a valid Maximum Experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Employment Type Choose Option -->
+                            <div class="mb-2 mt-2 row">
+                                <div class="col-md-4">
+                                    <label for="EmpType" class="form-label">Employment Type</label>
+                                    <select class="form-select mb-3" id="EmpType" required onchange="validate()">
+                                        <option value="None" selected>Choose...</option>
+                                        <option value="1">Internship</option>
+                                        <option value="2">Full Time</option>
+                                        <option value="3">Part Time</option>
+                                        <option value="3">Contractual</option>
+
+                                    </select>
+                                    <div class="valid-feedback" id="EmpType-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="EmpType-invalid">
+                                        Please select Employment Type.
+                                    </div>
+
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="vacancy" class="form-label">Vacancy</label>
+                                    <select class="form-select mb-3" id="vacancy">
+
+                                        <option value="1" selected>4</option>
+                                        <option value="2">6</option>
+                                        <option value="3">10</option>
+                                        <option value="3">15</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Location" class="form-label">Work Location</label>
+                                    <select class="form-select mb-3" id="Location" required onchange="validate()">
+                                        <option value="None" selected>Choose...</option>
+                                        <option value="1">Banglore</option>
+                                        <option value="2">Hyderabad</option>
+                                        <option value="3">Nagpur</option>
+                                        <option value="3">Pune</option>
+
+                                    </select>
+                                    <div class="valid-feedback" id="Location-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="Location-invalid">
+                                        Please select Job Location.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Salary and language -->
+                            <div class="mb-2 mt-2 row">
+                                <div class="col-md-6">
+                                    <label for="Salary" class="form-label">Salary</label>
+                                    <input type="text" class="form-control" id="Salary" placeholder="Enter Salary"
+                                        required autocomplete="off" onkeyup="validate()">
+                                    <div class="valid-feedback" id="Salary-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="Salary-invalid">
+                                        Please enter a valid Salary
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="Language" class="form-label">Language</label>
+                                    <input type="text" class="form-control" id="Language" placeholder="Enter Languages"
+                                        required autocomplete="off" onkeyup="validate()">
+                                    <div class="valid-feedback" id="Language-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="Language-invalid">
+                                        Please enter a valid Languages
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <form>
+                    <!-- 2nd -->
+                    <div class="companyDiv">
+                        <!-- Profile Requirement -->
                         <div class="form-group mb-3 mt-2">
-                            <label for="CompanyName">Company Name</label>
-                            <input type="text" class="form-control" id="CompanyName" placeholder="Enter Company name">
-                        </div>
-                        <div class="form-group mb-2 mt-2">
-                            <label for="JobTitle">Job Title</label>
-                            <input type="text" class="form-control" id="JobTitle" placeholder="Enter Job Title">
-                        </div>
-                        <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-6">
-                                <label for="Country">Country</label>
-                                <input type="text" class="form-control" id="Country" placeholder="Enter Country">
+                            <label for="ProfileRequirement" class="form-label">Profile Requirement</label>
+                            <textarea class="form-control" id="ProfileRequirement" rows="4"
+                                placeholder="Profile Requirement" style=" border-radius: 10px;" required
+                                autocomplete="off" onkeyup="validate()"></textarea>
 
+                            <div class="valid-feedback" id="ProfileRequirement-valid">
+                                Looks good!
                             </div>
-                            <div class="col-md-6">
-                                <label for="City">City</label>
-                                <input type="text" class="form-control" id="City" placeholder="Enter City">
-
+                            <div class="invalid-feedback" id="ProfileRequirement-invalid">
+                                Please enter a Profile Requirement
                             </div>
                         </div>
-                        <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-4">
-                                <label for="Level">Level</label>
-                                <select class="form-select form-select-mb mb-3" id="Level"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">Entry Level</option>
-                                    <option value="2" selected>Senior</option>
-                                    <option value="3">Associate</option>
-                                    <option value="3">Executive</option>
-
-                                </select>
-                                <!-- <input type="text" class="form-control" id="Level" placeholder="Enter Country"> -->
-
-                            </div>
-                            <div class="col-md-4">
-                                <label for="MinExp">Min Exp.(Years)</label>
-                                <select class="form-select form-select-mb mb-3" id="MinExp"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">Fresher</option>
-                                    <option value="2" selected>2</option>
-                                    <option value="3">3</option>
-                                    <option value="3">5</option>
-
-                                </select>
-
-                            </div>
-                            <div class="col-md-4">
-                                <label for="MaxExp">Max Exp.(Years)</label>
-                                <select class="form-select form-select-mb mb-3" id="MaxExp"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">1</option>
-                                    <option value="2">3</option>
-                                    <option value="3">5</option>
-                                    <option value="3" selected>7</option>
-
-                                </select>
-
-                            </div>
-                        </div>
-                        <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-4">
-                                <label for="EmpType">Employment Type</label>
-                                <select class="form-select form-select-mb mb-3" id="EmpType"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">Internship</option>
-                                    <option value="2" selected>Full Time</option>
-                                    <option value="3">Part Time</option>
-                                    <option value="3">Contractual</option>
-
-                                </select>
-
-                            </div>
-                            <div class="col-md-2">
-                                <label for="vacancy">Vacancy</label>
-                                <select class="form-select form-select-mb mb-3" id="vacancy"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">4</option>
-                                    <option value="2" selected>6</option>
-                                    <option value="3">10</option>
-                                    <option value="3">15</option>
-
-                                </select>
-
-                            </div>
-                            <div class="col-md-6">
-                                <label for="Location">Work Location</label>
-                                <select class="form-select form-select-mb mb-3" id="Location"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1">Banglore</option>
-                                    <option value="2">Hyderabad</option>
-                                    <option value="3">Nagpur</option>
-                                    <option value="3" selected>Pune</option>
-
-                                </select>
-
-                            </div>
-                        </div>
-                        <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-6">
-                                <label for="Salary">Salary</label>
-                                <input type="text" class="form-control" id="Salary" placeholder="Enter Salary">
-
-                            </div>
-                            <div class="col-md-6">
-                                <label for="Language">Language</label>
-                                <input type="text" class="form-control" id="Language" placeholder="Enter Languages">
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-
-
-                <!-- 2nd -->
-                <div class="companyDiv">
-                    <form>
+                        <!-- About Company -->
                         <div class="form-group mb-3 mt-2">
-                            <label for="CompanyName">Profile Requirement</label>
-                            <textarea class="form-control" id="CompanyName" rows="5" placeholder="Profile Requirement"
-                                style="height: 90px; border-radius: 10px;"></textarea>
+                            <label for="aboutCompany" class="form-label">About Company</label>
+                            <textarea class="form-control" id="aboutCompany" rows="4" placeholder="About Company"
+                                style="border-radius: 10px;" required autocomplete="off"
+                                onkeyup="validate()"></textarea>
+                            <div class="valid-feedback" id="aboutCompany-valid">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="aboutCompany-invalid">
+                                Please enter About Your Company
+                            </div>
+
                         </div>
+                        <!-- Company Website -->
                         <div class="form-group mb-3 mt-2">
-                            <label for="aboutCompany">About Company</label>
-                            <textarea class="form-control" id="aboutCompany" rows="5" placeholder="About Company"
-                                style="height: 90px; border-radius: 10px;"></textarea>
+                            <label for="Companyweb" class="form-label">Company Website</label>
+                            <input type="text" class="form-control" id="Companyweb" placeholder="Enter Company Website"
+                                required autocomplete="off" onkeyup="validate()">
+                            <div class="valid-feedback" id="Companyweb-valid">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="Companyweb-invalid">
+                                Please enter a Company website
+                            </div>
+
                         </div>
-                        <div class="form-group mb-3 mt-2">
-                            <label for="Companyweb">Company Website</label>
-                            <input type="text" class="form-control" id="Companyweb" placeholder="Enter Company Website">
-                        </div>
+
+                        <!-- Job Application URL -->
                         <div class="form-group mb-2 mt-2 row">
                             <div class="col-md-8">
-                                <label for="jobLink">Job Application URL (Direct Link for Job Application)</label>
+                                <label for="jobLink" class="form-label">Job Application URL (Direct Link for Job Application)</label>
                                 <input type="text" class="form-control" id="jobLink"
-                                    placeholder="Enter Job Application URL">
-
-                            </div>
+                                    placeholder="Enter Job Application URL"  required autocomplete="off" onkeyup="validate()">
+                                    <div class="valid-feedback" id="jobLink-valid">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback" id="jobLink-invalid">
+                                        Please enter a Company website
+                                    </div>
+                                </div>
                             <div class="col-md-4 ">
                                 <div class="textWithbox">
                                     <input type="checkbox">
@@ -229,48 +333,59 @@
                             </div>
                         </div>
 
-                    </form>
-                </div>
 
-                <!-- 3rd -->
-                <div class="companyDiv">
-                    <form>
+                    </div>
 
+                    <!-- 3rd -->
+                    <div class="companyDiv">
+                        <!-- valid days and Notice period -->
                         <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-6">
-                                <label for="validdays">Number of Days valid till</label>
-                                <select class="form-select form-select-mb mb-3" id="validdays"
-                                    aria-label=".form-select-lg example">
 
+                            <!-- Valid days -->
+                            <div class="col-md-6">
+                                <label for="validdays" class="form-label">Number of Days valid till</label>
+                                <select class="form-select mb-3" id="validdays" required onchange="validate()">
+                                    <option value="None" selected>Choose...</option>
                                     <option value="1">10</option>
-                                    <option value="2" selected>18</option>
+                                    <option value="2">18</option>
                                     <option value="3">20</option>
                                     <option value="3">30</option>
-
                                 </select>
-                                <!-- <input type="text" class="form-control" id="Level" placeholder="Enter Country"> -->
-
+                                <div class="valid-feedback" id="validdays-valid">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="validdays-invalid">
+                                    Please select a valid Days.
+                                </div>
                             </div>
+                            <!-- Notice period -->
                             <div class="col-md-6">
-                                <label for="noticePeriod">Notice Period</label>
-                                <select class="form-select form-select-mb mb-3" id="noticePeriod"
-                                    aria-label=".form-select-lg example">
-
-                                    <option value="1" selected>30 Days</option>
+                                <label for="noticePeriod" class="form-label">Notice Period</label>
+                                <select class="form-select form-select-mb mb-3" id="noticePeriod" required
+                                    onchange="validate()">
+                                    <option value="None" selected>Choose...</option>
+                                    <option value="1">30 Days</option>
                                     <option value="2">45 Days</option>
                                     <option value="3">60 Days</option>
                                     <option value="3">90 Days</option>
 
                                 </select>
+                                <div class="valid-feedback" id="noticePeriod-valid">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="noticePeriod-invalid">
+                                    Please select a Notice Period.
+                                </div>
 
                             </div>
-
                         </div>
+                        <!-- Attachment -->
                         <div class="form-group mb-2 mt-2 row">
                             <div class="col-md-9">
-                                <label for="Attachment">Attachment <span><img src="./Info icon.svg"alt=""></span></label>
-                                <input type="text" class="form-control" id="Attachment" placeholder="Enter Attachment">
-
+                                <label for="Attachment">Attachment
+                                    <span><img src="./Info icon.svg" alt=""></span>
+                                </label>
+                                <input type="file" class="form-control" id="Attachment" placeholder="Enter Attachment">
                             </div>
                             <div class="col-md-3 ">
                                 <div class="textWithbox">
@@ -280,28 +395,35 @@
                             </div>
                         </div>
 
-                    </form>
-                </div>
+                    </div>
 
-                <!-- 4th -->
-                <div class="companyDiv">
-                    <form>
-
+                    <!-- 4th -->
+                    <div class="companyDiv">
+<!-- Profession and experience -->
                         <div class="form-group mb-2 mt-2 row">
+                            <!-- Profession -->
                             <div class="col-md-7">
-                                <label for="Profession">Profession  <span><img src="./Info icon.svg"alt=""></span></label>
-                                <select class="form-select form-select-mb mb-3" id="Profession"
-                                    aria-label=".form-select-lg example">
-                                    <option value="1" selected>Select Profession</option>
+                                <label for="Profession" class="form-label">Profession <span><img src="./Info icon.svg"
+                                            alt=""></span></label>
+                                <select class="form-select mb-3" id="Profession"
+                                required onchange="validate()">
+                                <option value="None" selected>Choose...</option>
+                                    <option value="1">Web Developer</option>
                                     <option value="2">HR</option>
                                     <option value="3">Frontend Developer</option>
                                     <option value="3">Backend Developer</option>
                                 </select>
-
+                                <div class="valid-feedback" id="Profession-valid">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="Profession-invalid">
+                                    Please select a Profession.
+                                </div>
                             </div>
+                            <!-- Experience -->
                             <div class="col-md-3">
                                 <label for="Experience">Experience</label>
-                                <select class="form-select form-select-mb mb-3" id="MinExp"
+                                <select class="form-select mb-3" id="MinExp"
                                     aria-label=".form-select-lg example">
 
                                     <option value="1">1</option>
@@ -314,143 +436,134 @@
                             </div>
                             <div class="col-md-2">
                                 <img src="./Add.svg" alt="Add Button">
-
                             </div>
                         </div>
 
+
                         <ul style="font-size: large;">
-                            <li>Roads & highways engineering required 4 years of experience <img
-                                    src="./Delete.svg" alt="Add Button"> </li>
-                            <li> Industrial Required 4 Years Of Experience <img src="./Delete.svg"
-                                    alt="Add Button"> </li>
-
+                            <li>Roads & highways engineering required 4 years of experience
+                                <img src="./Delete.svg" alt="Add Button">
+                            </li>
+                            <li> Industrial Required 4 Years Of Experience
+                                <img src="./Delete.svg" alt="Add Button">
+                            </li>
                         </ul>
-
-
                         <div class="form-group mb-2 mt-2 row">
 
                             <input type="checkbox" class="col-md-1">
                             <div class="col-md-11">
-                                Check if you want the candidate to have experience in all of the above professions or
+                                Check if you want the candidate to have experience in all of the above professions
+                                or
                                 else a
                                 match to any of the above professions would be considered.
 
                             </div>
 
                         </div>
-
-
+                        <!-- sector ,experience -->
                         <div class="form-group mb-2 mt-4 row">
+                            <!-- Sector -->
                             <div class="col-md-7">
-                                <label for="Sector">Sector  <span> <img src="./Info icon.svg"alt=""></span></label>
-                                <select class="form-select form-select-mb mb-3" id="Sector"
-                                    aria-label=".form-select-lg example">
-                                    <option value="1" selected>Select Profession</option>
+                                <label for="Sector" class="form-label">Sector 
+                                    <span> <img src="./Info icon.svg" alt=""></span>
+                                </label>
+                                <select class="form-select mb-3" id="Sector"
+                                required onchange="validate()">
+                                <option value="None" selected>Choose...</option>
+                                    <option value="1">IT</option>
                                     <option value="2">HR</option>
-                                    <option value="3">Frontend Developer</option>
-                                    <option value="3">Backend Developer</option>
+                                    <option value="3">Management</option>
+                                    <option value="3">Sales</option>
                                 </select>
-
+                                <div class="valid-feedback" id="Sector-valid">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback" id="Sector-invalid">
+                                    Please select a Sector.
+                                </div>
                             </div>
                             <div class="col-md-3">
-                                <label for="Experience">Experience</label>
-                                <select class="form-select form-select-mb mb-3" id="MinExp"
-                                    aria-label=".form-select-lg example">
-
+                                <label for="Experience" class="form-label">Experience</label>
+                                <select class="form-select mb-3" id="MinExp"
+                                    >
                                     <option value="1">1</option>
                                     <option value="2" selected>2</option>
                                     <option value="3">3</option>
                                     <option value="3">5</option>
-
                                 </select>
-
                             </div>
                             <div class="col-md-2">
                                 <img src="./Add.svg" alt="Add Button">
-
                             </div>
                         </div>
-
-
-
                         <ul style="font-size: large;">
-                            <li>Commercial Required 4 Years Of Experience <img
-                                    src="./Delete.svg" alt="Add Button"> </li>
-                            <li> Industrial Required 4 Years Of Experience <img src="./Delete.svg"
-                                    alt="Add Button"> </li>
-
+                            <li>Commercial Required 4 Years Of Experience
+                                <img src="./Delete.svg" alt="Add Button">
+                            </li>
+                            <li> Industrial Required 4 Years Of Experience
+                                <img src="./Delete.svg" alt="Add Button">
+                            </li>
                         </ul>
-
-
                         <div class="form-group mb-2 mt-2 row">
 
                             <input type="checkbox" class="col-md-1">
                             <div class="col-md-11">
-                                Check if you want the candidate to have experience in all of the above professions or
+                                Check if you want the candidate to have experience in all of the above professions
+                                or
                                 else a
                                 match to any of the above professions would be considered.
 
                             </div>
 
                         </div>
-
-
-
                         <div class="form-group mb-2 mt-4 row">
                             <div class="col-md-10">
-                                <label for="Software">Software  <span> <img src="./Info icon.svg"alt=""></span></label>
+                                <label for="Software">Software <span> <img src="./Info icon.svg" alt=""></span></label>
                                 <select class="form-select form-select-mb mb-3" id="Sector"
                                     aria-label=".form-select-lg example">
-                                    <option value="1" selected>Select Profession</option>
+                                    <option value="1" selected>Select </option>
                                     <option value="2">HR</option>
                                     <option value="3">Frontend Developer</option>
                                     <option value="3">Backend Developer</option>
                                 </select>
-
                             </div>
-                            
                             <div class="col-md-2">
                                 <img src="./Add.svg" alt="Add Button">
-
                             </div>
                         </div>
-
-
-
                         <ul style="font-size: large;">
-                            <li>Revit Required <img
-                                    src="./Delete.svg" alt="Add Button"> </li>
-                            <li> Autocad Required<img src="./Delete.svg"
-                                    alt="Add Button"> </li>
-
+                            <li>Revit Required <img src="./Delete.svg" alt="Add Button"> </li>
+                            <li> Autocad Required<img src="./Delete.svg" alt="Add Button"> </li>
                         </ul>
-
-
                         <div class="form-group mb-2 mt-2 row">
-
                             <input type="checkbox" class="col-md-1">
                             <div class="col-md-11">
-                                Check if you want the candidate to have experience in all of the above professions or
+                                Check if you want the candidate to have experience in all of the above professions
+                                or
                                 else a
                                 match to any of the above professions would be considered.
-
                             </div>
-
                         </div>
-                    </form>
 
-                </div>
+                    </div>
 
-                <!-- 5th -->
-                <div class="companyDiv">
-                    <form>
+                    <!-- 5th -->
+                    <div class="companyDiv">
+<!-- Contact Info -->
                         <div class="form-group mb-3 mt-2">
-                            <label for="Contactinfo">Contact Info</label>
-                            <input type="text" class="form-control" id="Contactinfo" placeholder="Enter Company Number">
-                        </div>
+                            <label for="Contactinfo" class="form-label">Contact Info</label>
+                            <input type="text" class="form-control" id="Contactinfo"
+                             placeholder="Enter Company Number" required autocomplete="off" onkeyup="validate()">
+                             <div class="valid-feedback" id="Contactinfo-valid">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback" id="Contactinfo-invalid">
+                                Please enter a valid Contact No.
+                            </div>
+                            </div>
                         <div class="form-group mb-2 mt-2 row">
-                            <div class="col-md-7">
-                                <input type="email" class="form-control" id="email" placeholder="">
+                            <div class="col-md-7" >
+                                <input type="email" class="form-control" id="email" placeholder="Email ID">
 
                             </div>
                             <div class="col-md-1">
@@ -462,31 +575,38 @@
 
                             </div>
                         </div>
-                    </form>
-                </div>
 
-                <div class="form-group mb-2 mt-2 row">
-                    <div class="col-md-6">
-                        
-                    </div>
-                    <div class="col-md-4">
-                        <div class="btn-group " role="group" aria-label="Basic mixed styles example">
-                            <button type="button" class="btn btn-light">Cancel</button>
-                            <button type="button" class="btn btn-light">Save</button>
-                            <button type="button" class="btn btn-warning">Publish</button>
-                          </div>
-                    </div>
                     </div>
 
-              
+
+                    <!-- button -->
+                    <div class="form-group mb-2 mt-2 row">
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="btn-group " role="group">
+                                <button type="button" class="btn btn-light">Cancel</button>
+                                <button type="button" class="btn btn-light">Save</button>
+                                <button type="button" class="btn btn-warning" onclick="validate(true)">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
-
-
-
-
-
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 
 
